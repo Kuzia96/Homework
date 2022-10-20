@@ -77,7 +77,7 @@ for num in range(10):
         lst.append(num // 2)
     else:
         lst.append(num * 10)
-        print(lst)
+print(lst)
 
 # (3)
 # d = {}
