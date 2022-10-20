@@ -151,3 +151,12 @@ lst_to_sort.sort(reverse=True)
 print(lst_to_sort)
 
 # 22. Use map and lambda to update the lst_to_sort by multiply each element by 2
+lst_to_sort = [5, 18, 1, 24, 33, 15, 13, 55]
+lst = list(map(lambda x: x*2, lst_to_sort))
+print(lst)
+
+# 23*. Raise each list number to the corresponding number on another list:
+# list_A = [2, 3, 4]
+# list_B = [5, 6, 7]
+list_A = [2, 3, 4]
+list_B = [5, 6, 7]
