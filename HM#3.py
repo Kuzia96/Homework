@@ -54,7 +54,6 @@ print("Anna has %(apples)s apples and %(peaches)s peaches." % {"apples": apple, 
 dict_a = {"apples": 3, "peaches": 2}
 print("Anna has {} apples and {} peaches".format(dict_a["apples"], dict_a["peaches"]))
 
-
 # Comprehensions:
 # # (1)
 # lst = []
@@ -67,7 +66,6 @@ print("Anna has {} apples and {} peaches".format(dict_a["apples"], dict_a["peach
 # #
 # (2)
 # list_comprehension = [num // 2 if num % 2 == 0 else num * 10 for num in range(10)]
-
 
 # 12. Convert (1) to list comprehension
 lst = [num**2 if num % 2 == 1 else num ** 4 for num in range(10)]
@@ -91,6 +89,65 @@ for num in range(10):
 d = {num: num ** 2 for num in range(1, 11) if num % 2 == 1}
 print(d)
 
+# (4)
+# d = {}
+# for num in range(1, 11):
+#     if num % 2 == 1:
+#         d[num] = num ** 2
+#     else:
+#         d[num] = num // 0.5
+# print(d)
 # 15*. Convert (4) to dict comprehension.
 d = {num: num**2 if num % 2 == 1 else num // 0.5 for num in range(1, 11)}
 print(d)
+
+# dict_comprehension = {x: x**3 for x in range(10) if x**3 % 4 == 0}
+# 16. Convert (5) to regular for with if.
+d = {}
+for num in range(10):
+    if num ** 3 % 4 == 0:
+        d[num] = num ** 3
+print(d)
+
+# (6)
+# dict_comprehension = {x: x**3 if x**3 % 4 == 0 else x for x in range(10)}
+# 17*. Convert (6) to regular for with if-else.
+d = {}
+for num in range(10):
+    if num ** 3 % 4 == 0:
+        d[num] = num ** 3
+    else:
+        d [num] = num
+print(d)
+
+# (7)
+# def foo(x, y):
+#     if x < y:
+#         return x
+#     else:
+#         return y
+# 18. Convert (7) to lambda function
+foo = lambda x, y: x if x < y else y
+
+# (8)
+# foo = lambda x, y, z: z if y < x and x > z else y
+# 19*. Convert (8) to regular function
+def foo(x, y, z):
+    if x > y and x > z:
+        return z
+    else:
+        return y
+
+# lst_to_sort = [5, 18, 1, 24, 33, 15, 13, 55]
+
+# 20. Sort lst_to_sort from min to max
+lst_to_sort = [5, 18, 1, 24, 33, 15, 13, 55]
+lst_to_sort.sort()
+print(lst_to_sort)
+
+# 21. Sort lst_to_sort from max to min
+lst_to_sort = [5, 18, 1, 24, 33, 15, 13, 55]
+lst_to_sort.sort(reverse=True)
+print(lst_to_sort)
+
+# 22. Use map and lambda to update the lst_to_sort by multiply each element by 2
