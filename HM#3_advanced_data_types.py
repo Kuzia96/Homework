@@ -160,3 +160,23 @@ print(lst)
 # list_B = [5, 6, 7]
 list_A = [2, 3, 4]
 list_B = [5, 6, 7]
+lst = list(map(lambda x, y: x**y, list_A, list_B))
+print(lst)
+
+# 24. Use filter and lambda to filter the number of a lst_to_sort with elem % 2 == 1.
+lst_to_sort = [5, 18, 1, 24, 33, 15, 13, 55]
+lst = list(filter(lambda x: x % 2 == 1, lst_to_sort))
+print(lst)
+
+# 25. Considering the range of values: b = range(-10, 10), use the function filter to return only negative numbers.
+r = range(-10, 10)
+negative_numbers = list(filter(lambda o: o < 0, r))
+print(negative_numbers)
+
+# 26*. Using the filter function, find the values that are common to the two lists:
+# list_1 = [1,2,3,5,7,9]
+# list_2 = [2,3,5,6,7,8]
+list_1 = [1,2,3,5,7,9]
+list_2 = [2,3,5,6,7,8]
+s = list(filter(lambda x: x in list_1, list_2))
+print(s)
